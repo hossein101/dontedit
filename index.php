@@ -1,6 +1,6 @@
 <?php
 ob_start();
-define('API_KEY','292426993:AAF-3k3FEi0BqvtGQzi--xaGn9BX5OQlhrA');
+define('API_KEY','244104217:AAHxfT9niH0b3RvhN3BEIoJL7k7W2UBO56E');
 $admin = "196817317";
 function bot($method,$datas=[]){
     $url = "https://api.telegram.org/bot".API_KEY."/".$method;
@@ -77,7 +77,7 @@ if (isset($update->edited_message)){
 }elseif(isset($update->message-> new_chat_member )){
 bot('sendMessage',[
       'chat_id'=>$chat_id,
-      'text'=>"به گروه خوش اومدی
+      'text'=>"به گروه خوش اومدی! 
       اینجا پیام ادیتی نداریما"
       ]);
 }
