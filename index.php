@@ -32,7 +32,8 @@ if (isset($update->edited_message)){
   $jsu = json_decode(file_get_contents(__DIR__.'/users/'.$eid.'.json'));
   $text = "<b>".$edname."</b>\nعزیز!\n من دیدم که چی گفتی😕 هرچقد ادیت کنی من میفهمم☺️
   گفتی:
-".$jsu;
+".$jsu."
+بعد ادیتش کردی🙃";
   $id = $update->edited_message->chat->id;
   bot('sendmessage',[
     'chat_id'=>$id,
@@ -59,7 +60,7 @@ if (isset($update->edited_message)){
           ['text'=>'🔰NajiTeam🔰','url'=>'https://telegram.me/Naji_Team']
         ],
 	[
-          ['text'=>'👥 Add To Group ➕','url'=>'https://telegram.me/I_DontEditBot?startgroup=new']
+          ['text'=>'👥 Add To Group ➕','url'=>'https://telegram.me/Naji_DontEditBot?startgroup=new']
         ]
       ]
     ])
@@ -76,7 +77,8 @@ if (isset($update->edited_message)){
 }elseif(isset($update->message-> new_chat_member )){
 bot('sendMessage',[
       'chat_id'=>$chat_id,
-      'text'=>"به گروه خوش اومدی!/nاینجا پیام ادیتی نداریما"
+      'text'=>"به گروه خوش اومدی
+      اینجا پیام ادیتی نداریما"
       ]);
 }
   
