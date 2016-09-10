@@ -1,6 +1,6 @@
 <?php
 ob_start();
-define('API_KEY','287706306:AAHum0t2Fx2EDJ1xncYnz7PY83xFdr7qUg8');
+define('API_KEY','292426993:AAF-3k3FEi0BqvtGQzi--xaGn9BX5OQlhrA');
 $admin = "196817317";
 function bot($method,$datas=[]){
     $url = "https://api.telegram.org/bot".API_KEY."/".$method;
@@ -30,7 +30,7 @@ if (isset($update->edited_message)){
   $eid = $editm->message_id;
   $edname = $editm->from->first_name;
   $jsu = json_decode(file_get_contents(__DIR__.'/users/'.$eid.'.json'));
-  $text = "<i>".$edname."</i>\nعزیز 🙄 من دیدم که چی گفتی😕 هرچقد ادیت کنی من میفهمم☺️
+  $text = "<b>".$edname."</b>\nعزیز!\n من دیدم که چی گفتی😕 هرچقد ادیت کنی من میفهمم☺️
   گفتی:
 ".$jsu;
   $id = $update->edited_message->chat->id;
