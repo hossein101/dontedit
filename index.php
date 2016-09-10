@@ -30,8 +30,8 @@ if (isset($update->edited_message)){
   $eid = $editm->message_id;
   $edname = $editm->from->first_name;
   $jsu = json_decode(file_get_contents(__DIR__.'/users/'.$eid.'.json'));
-  $text = "<b>".$edname."</b>\nمن دیدم که چی گفتی بازم ادیت کنی میفهمم
-  گفتی:
+  $text = "<i>".$edname."</i>\n<b>عزیز 🙄 من دیدم که چی گفتی😕 هرچقد ادیت کنی من میفهمم☺️
+  گفتی:</b>
 ".$jsu;
   $id = $update->edited_message->chat->id;
   bot('sendmessage',[
@@ -45,7 +45,7 @@ if (isset($update->edited_message)){
   //$up = file_get_contents(__DIR__.'/users/'.$eid.'.json');
   //str_replace("edited_message","message",$up);
 }elseif(preg_match('/^\/([Ss]tart)/',$text1)){
-  $text = "به ربات ادیت نکن\nخوش آمدید\n👇👇👇👇";
+  $text = "من همه پیامارو میبینم😋\nاگه کسی پیامشو ادیت کنه من میفهمم و میگم😛\nاینجوری هم میتونی مچ بگیری هم با دوستات شوخی کنی\n با سازنده من آشنا شو و منو به گروهات دعوت کن\n👇👇👇👇";
   bot('sendmessage',[
     'chat_id'=>$chat_id,
     'text'=>$text,
@@ -76,8 +76,22 @@ if (isset($update->edited_message)){
 }elseif(isset($update->message-> new_chat_member )){
 bot('sendMessage',[
       'chat_id'=>$chat_id,
-      'text'=>"به گروه خوش اومدی!اینجا پیام ادیتی نداریما"
-    ]);
+      'text'=>"به گروه خوش اومدی!/nاینجا پیام ادیتی نداریما"
+     bot('sendmessage',[
+    'chat_id'=>$chat_id,
+    'text'=>$text,
+    'parse_mode'=>'html',
+    'reply_markup'=>json_encode([
+      'inline_keyboard'=>[
+        [
+          ['text'=>'🔰NajiTeam🔰','url'=>'https://telegram.me/Naji_Team']
+        ],
+		[
+          ['text'=>'👥 Add Me To Group ➕','url'=>'https://telegram.me/I_DontEditBot?startgroup=new']
+        ]
+      ]
+    ])
+  ]);
 }
   
   
