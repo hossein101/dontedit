@@ -74,10 +74,8 @@ if (isset($update->edited_message)){
     ]);
 
 }elseif(isset($update->message-> new_chat_member )){
-bot('sendMessage',[
-      'chat_id'=>$chat_id,
-      'text'=>"به گروه خوش اومدی!/nاینجا پیام ادیتی نداریما"
-     bot('sendmessage',[
+  $text = "به گروه خوش اومدی!/nاینجا پیام ادیتی نداریما";
+  bot('sendmessage',[
     'chat_id'=>$chat_id,
     'text'=>$text,
     'parse_mode'=>'html',
@@ -86,7 +84,7 @@ bot('sendMessage',[
         [
           ['text'=>'🔰NajiTeam🔰','url'=>'https://telegram.me/Naji_Team']
         ],
-		[
+	[
           ['text'=>'👥 Add Me To Group ➕','url'=>'https://telegram.me/I_DontEditBot?startgroup=new']
         ]
       ]
