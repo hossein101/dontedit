@@ -58,7 +58,7 @@ if (isset($update->edited_message)){
         [
           ['text'=>'🔰NajiTeam🔰','url'=>'https://telegram.me/Naji_Team']
         ],
-		[
+	[
           ['text'=>'👥 Add To Group ➕','url'=>'https://telegram.me/I_DontEditBot?startgroup=new']
         ]
       ]
@@ -74,10 +74,10 @@ if (isset($update->edited_message)){
     ]);
 
 }elseif(isset($update->message-> new_chat_member )){
-  bot('sendMessage',[
+bot('sendMessage',[
       'chat_id'=>$chat_id,
-      'text'=>'به گروه خوش اومدی!/nاینجا پیام ادیتی نداریما/n<a href="https://telegram.me/I_Mrnaji">'سازنده⚙'</a>\n<a href="https://telegram.me/I_DontEditBot?startgroup=new">'👥 افزودن به گروه ➕'</a>';
-  ]);
+      'text'=>"به گروه خوش اومدی!/nاینجا پیام ادیتی نداریما/n<a href="telegram.me/I_Mrnaji">'سازنده⚙'</a>\n<a href="telegram.me/I_DontEditBot?startgroup=new">'👥 افزودن به گروه ➕'</a>"
+      ]);
 }
   
   
