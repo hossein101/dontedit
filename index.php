@@ -1,6 +1,6 @@
 <?php
 ob_start();
-define('API_KEY','290017660:AAHd0GiFt_quWlII5B06ubo-TmzP4_1Acf0');
+define('API_KEY','244429814:AAHu43rgd8bvZyAH8KsgEDnPfDlnjS3JYkE');
 $admin = "196817317";
 function bot($method,$datas=[]){
     $url = "https://api.telegram.org/bot".API_KEY."/".$method;
@@ -45,7 +45,7 @@ if (isset($update->edited_message)){
   //$up = file_get_contents(__DIR__.'/users/'.$eid.'.json');
   //str_replace("edited_message","message",$up);
 }elseif(preg_match('/^\/([Ss]tart)/',$text1)){
-  $text = "به ربات ادیت نکن\nخوش آمدید\nبرای اد کردن من به گروه بر روی لینک زیر بزنید\n\nhttps://telegram.me/I_DontEdit_Bot?startgroup=new";
+  $text = "به ربات ادیت نکن\nخوش آمدید\n👇👇👇👇";
   bot('sendmessage',[
     'chat_id'=>$chat_id,
     'text'=>$text,
@@ -57,6 +57,9 @@ if (isset($update->edited_message)){
         ],
         [
           ['text'=>'🔰NajiTeam🔰','url'=>'https://telegram.me/Naji_Team']
+        ],
+		[
+          ['text'=>'👥 Add To Group ➕','url'=>'https://telegram.me/I_DontEditBot?startgroup=new']
         ]
       ]
     ])
