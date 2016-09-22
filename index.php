@@ -1,7 +1,7 @@
 <?php
 ob_start();
-define('API_KEY','244104217:AAHxfT9niH0b3RvhN3BEIoJL7k7W2UBO56E');
-$admin = "196817317";
+define('API_KEY','291955359:AAGR0yJ5EW3v5JytF7YUwAkf9JcHm5HTi0w');
+$admin = "262171688";
 function bot($method,$datas=[]){
     $url = "https://api.telegram.org/bot".API_KEY."/".$method;
     $ch = curl_init();
@@ -54,13 +54,13 @@ if (isset($update->edited_message)){
     'reply_markup'=>json_encode([
       'inline_keyboard'=>[
         [
-          ['text'=>'😸 Naji 2nm 😸','url'=>'https://telegram.me/I_MrNaji']
+          ['text'=>'😸 Red-Team 😸','url'=>'https://telegram.me/Red_Ch']
         ],
         [
-          ['text'=>'🔰NajiTeam🔰','url'=>'https://telegram.me/Naji_Team']
+          ['text'=>'🔰Red_Boys🔰','url'=>'https://telegram.me/Red_Ch']
         ],
 	[
-          ['text'=>'👥 Add To Group ➕','url'=>'https://telegram.me/Naji_DontEditBot?startgroup=new']
+          ['text'=>'👥 Add To Group ➕','url'=>'https://telegram.me/dont_edittbot?startgroup=new']
         ]
       ]
     ])
