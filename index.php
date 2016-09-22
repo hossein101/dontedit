@@ -54,13 +54,13 @@ if (isset($update->edited_message)){
     'reply_markup'=>json_encode([
       'inline_keyboard'=>[
         [
-          ['text'=>'😸 Red-Team 😸','url'=>'https://telegram.me/Red_Ch']
+          ['text'=>'😸 Channel 😸','url'=>'https://telegram.me/Red_Ch']
         ],
         [
-          ['text'=>'🔰Red_Boys🔰','url'=>'https://telegram.me/Red_Ch']
+          ['text'=>'🔰سازنده بات🔰','url'=>'https://telegram.me/SiCk_KoN_BaW']
         ],
 	[
-          ['text'=>'👥 Add To Group ➕','url'=>'https://telegram.me/dont_edittbot?startgroup=new']
+          ['text'=>'👥 Add To Group ➕','url'=>'https://telegram.me/dont_editt_bot?startgroup=new']
         ]
       ]
     ])
