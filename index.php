@@ -60,7 +60,7 @@ if (isset($update->edited_message)){
           ['text'=>'🔰سازنده بات🔰','url'=>'https://telegram.me/SiCk_KoN_BaW']
         ],
 	[
-          ['text'=>'👥 Add To Group ➕','url'=>'https://telegram.me/dont_editt_bot?startgroup=new']
+          ['text'=>'👥 Add To Group ➕','url'=>'https://telegram.me/donteditt_bot?startgroup=new']
         ]
       ]
     ])
@@ -77,8 +77,8 @@ if (isset($update->edited_message)){
 }elseif(isset($update->message-> new_chat_member )){
 bot('sendMessage',[
       'chat_id'=>$chat_id,
-      'text'=>"به گروه خوش اومدی! 
-      اینجا پیام ادیتی نداریما"
+      'text'=>"نبینم کسی ادیت کنه ها😐😂
+سازنده بات: @SiCk_KoN_BaW "
       ]);
 }
   
